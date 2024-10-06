@@ -7,7 +7,6 @@ body {
 	align-items: center;
 	height: 720px;
 }
-
 .container {
 	background-color: #0f1121;
 	width: 400px;
@@ -22,7 +21,6 @@ body {
 	align-items: center;
 	/*box-shadow: rgba(15, 17, 33, 0.4) 5px 5px, rgba(15, 17, 33, 0.3) 10px 10px, rgba(15, 17, 33, 0.2) 15px 15px, rgba(15, 17, 33, 0.1) 20px 20px, rgba(15, 17, 33, 0.05) 25px 25px;*/
 }
-
 .donut-chart {
 	position: relative;
 	width: 300px;
@@ -30,7 +28,6 @@ body {
 	margin-top: 25px;
 	margin-bottom: 25px;
 }
-
 #ring {
 	position: absolute;
 	top: 0;
@@ -38,7 +35,6 @@ body {
 	width: 100%;
 	height: 100%;
 }
-
 .tasks {
 	color: white;
 	width: 90%;
@@ -47,7 +43,6 @@ body {
 	border-radius: 8px;
 	padding: 20px;
 }
-
 .tasks fieldset {
 	padding: 10px;
 	margin: 0;
@@ -62,17 +57,14 @@ body {
 	font-weight: bold;
 	color: #87ceeb;
 }
-
 .tasks label {
 	cursor: pointer;
 	display: block;
 	margin-bottom: 10px;
 }
-
 .tasks input[type="checkbox"] {
 	display: none;
 }
-
 .tasks input[type="checkbox"] + label:before {
 	content: "";
 	display: inline-block;
@@ -83,11 +75,9 @@ body {
 	border-radius: 3px;
 	vertical-align: middle;
 }
-
 .tasks input[type="checkbox"]:checked + label:before {
 	background-color: #87ceeb;
 }
-
 .tasks input[type="checkbox"] + label:after {
 	display: none;
 	color: #fff;
@@ -96,11 +86,9 @@ body {
 	text-align: center;
 	vertical-align: middle;
 }
-
 .tasks input[type="checkbox"]:checked + label:after {
 	display: inline-block;
 }
-
 .donut {
 	position: absolute;
 	top: 0;
@@ -111,7 +99,6 @@ body {
 	background-color: #87ceeb;
 	z-index: 1;
 }
-
 .donut-progress {
 	position: absolute;
 	background-color: #0f1121;
@@ -122,7 +109,6 @@ body {
 	height: 100%;
 	z-index: 2;
 }
-
 .donut-inner {
 	position: absolute;
 	top: 7%;
@@ -133,7 +119,6 @@ body {
 	background-color: #0f1121;
 	z-index: 3;
 }
-
 .labeling {
 	position: absolute;
 	top: 0;
