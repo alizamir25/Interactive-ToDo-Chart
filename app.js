@@ -1,26 +1,26 @@
-document.addEventListener("DOMContentLoaded", (event) => {
+document.addEventListener("DOMContentLoaded", (event)=>{
 	updateDonut();
 });
-function updateDonut() {
-	var checkboxes = document.querySelectorAll('.tasks input[type="checkbox"]');
-	var checkedCount = 0;
-	checkboxes.forEach(function (checkbox) {
-		if (checkbox.checked) {
+function updateDonut(){
+	var checkboxes=document.querySelectorAll('.tasks input[type="checkbox"]');
+	var checkedCount=0;
+	checkboxes.forEach(function (checkbox){
+		if (checkbox.checked){
 			checkedCount++;
 		}
 	});
-	var percentage = (checkedCount / checkboxes.length) * 100;
+	var percentage=(checkedCount/checkboxes.length)*100;
 	createRing("ring", percentage);
 }
-function createRing(containerId, percentage) {
-	var container = document.getElementById(containerId);
-	var radius = 135;
-	var strokeWidth = 30;
-	var circumference = 2 * Math.PI * radius;
-	var angle = (percentage / 100) * 360;
-	var centerX = 150;
-	var centerY = 150;
-	var backgroundCircle = document.createElementNS(
+function createRing(containerId, percentage){
+	var container=document.getElementById(containerId);
+	var radius=135;
+	var strokeWidth=30;
+	var circumference=2*Math.PI*radius;
+	var angle=(percentage/100)*360;
+	var centerX=150;
+	var centerY=150;
+	var backgroundCircle=document.createElementNS(
 		"http://www.w3.org/2000/svg",
 		"circle"
 	);
