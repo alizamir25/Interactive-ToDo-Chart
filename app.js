@@ -1,16 +1,16 @@
-document.addEventListener("DOMContentLoaded", (event)=>{
+document.addEventListener("DOMContentLoaded",(event)=>{
 	updateDonut();
 });
 function updateDonut(){
 	var checkboxes=document.querySelectorAll('.tasks input[type="checkbox"]');
 	var checkedCount=0;
-	checkboxes.forEach(function (checkbox){
+	checkboxes.forEach(function(checkbox){
 		if (checkbox.checked){
 			checkedCount++;
 		}
 	});
 	var percentage=(checkedCount/checkboxes.length)*100;
-	createRing("ring", percentage);
+	createRing("ring",percentage);
 }
 function createRing(containerId, percentage){
 	var container=document.getElementById(containerId);
@@ -24,25 +24,25 @@ function createRing(containerId, percentage){
 		"http://www.w3.org/2000/svg",
 		"circle"
 	);
-	backgroundCircle.setAttribute("cx", centerX);
-	backgroundCircle.setAttribute("cy", centerY);
-	backgroundCircle.setAttribute("r", radius);
-	backgroundCircle.setAttribute("stroke", "#0F1121");
-	backgroundCircle.setAttribute("stroke-width", strokeWidth);
-	backgroundCircle.setAttribute("fill", "none");
+	backgroundCircle.setAttribute("cx",centerX);
+	backgroundCircle.setAttribute("cy",centerY);
+	backgroundCircle.setAttribute("r",radius);
+	backgroundCircle.setAttribute("stroke","#0F1121");
+	backgroundCircle.setAttribute("stroke-width",strokeWidth);
+	backgroundCircle.setAttribute("fill","none");
 	container.innerHTML="";
 	container.appendChild(backgroundCircle);
 	var foregroundCircle=document.createElementNS(
 		"http://www.w3.org/2000/svg",
 		"circle"
 	);
-	foregroundCircle.setAttribute("cx", centerX);
-	foregroundCircle.setAttribute("cy", centerY);
-	foregroundCircle.setAttribute("r", radius);
-	foregroundCircle.setAttribute("stroke", "#87CEEB");
-	foregroundCircle.setAttribute("stroke-width", strokeWidth);
-	foregroundCircle.setAttribute("fill", "none");
-	foregroundCircle.setAttribute("stroke-dasharray", circumference);
+	foregroundCircle.setAttribute("cx",centerX);
+	foregroundCircle.setAttribute("cy",centerY);
+	foregroundCircle.setAttribute("r",radius);
+	foregroundCircle.setAttribute("stroke","#87CEEB");
+	foregroundCircle.setAttribute("stroke-width",strokeWidth);
+	foregroundCircle.setAttribute("fill","none");
+	foregroundCircle.setAttribute("stroke-dasharray",circumference);
 	foregroundCircle.setAttribute(
 		"stroke-dashoffset",
 		circumference-(circumference*percentage)/100
