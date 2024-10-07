@@ -53,18 +53,18 @@ function createRing(containerId, percentage){
 	);
 	container.appendChild(foregroundCircle);
 	var labelText=percentage.toFixed(0)+"%";
-	var label=document.createElementNS("http://www.w3.org/2000/svg", "text");
-	label.setAttribute("x", centerX);
-	label.setAttribute("y", centerY+10);
-	label.setAttribute("fill", "white");
-	label.setAttribute("font-size", "30");
-	label.setAttribute("font-weight", "bolder");
-	label.setAttribute("text-anchor", "middle");
+	var label=document.createElementNS("http://www.w3.org/2000/svg","text");
+	label.setAttribute("x",centerX);
+	label.setAttribute("y",centerY+10);
+	label.setAttribute("fill","white");
+	label.setAttribute("font-size","30");
+	label.setAttribute("font-weight","bolder");
+	label.setAttribute("text-anchor","middle");
 	label.textContent=labelText;
 	container.appendChild(label);
 }
-createRing("ring", 0);
+createRing("ring",0);
 var checkboxes=document.querySelectorAll('.tasks input[type="checkbox"]');
 checkboxes.forEach(function (checkbox){
-	checkbox.addEventListener("change", updateDonut);
+	checkbox.addEventListener("change",updateDonut);
 });
