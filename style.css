@@ -54,7 +54,7 @@ body{
 	margin-bottom: 10px;
 	font-size: 20px;
 	font-weight: bold;
-	color: #87ceeb;
+	color: #68c6eb;
 }
 .tasks label{
 	cursor: pointer;
@@ -75,7 +75,7 @@ body{
 	vertical-align: middle;
 }
 .tasks input[type="checkbox"]:checked+label:before{
-	background-color: #87ceeb;
+	background-color: #68c6eb;
 }
 .tasks input[type="checkbox"]+label:after{
 	display: none;
@@ -95,7 +95,7 @@ body{
 	width: 100%;
 	height: 100%;
 	border-radius: 50%;
-	background-color: #87ceeb;
+	background-color: #68c6eb;
 	z-index: 1;
 }
 .donut-progress{
